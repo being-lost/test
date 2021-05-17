@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fff.demo.mapper.DataMapper">
+    <insert id="insertMyDataList" parameterType="java.util.List">
+        insert into test(
+        unid,
+        sellerPrice,
+        description,
+        taibaoPrice,
+        type,
+        createdAt,
+        activityPrice,
+        price,
+        extra,
+        sellerSetJson,
+        isCouponCard,
+        commission,
+        isActivity,
+
+        details,
+        id,
+        state,
+        sellerPoint,
+
+        updatedAt,
+        expressType,
+        weight,
+        outLink,
+        goodId,
+        isOutLink,
+        gdeliveryTemplateName,
+        url,
+        chainsActionId,
+        numb,
+        sale,
+        unit,
+        gdeliveryTemplateId,
+        sharePrice,
+        refundNumb,
+        zeroBuy,
+        name,
+        shopType,
+        categoryId
+        ) values
+        <foreach collection="list" index="index" item="item" separator=",">
+            (
+            #{item.unid}
+            #{item.sellerPrice}
+            #{item.description}
+            #{item.taibaoPrice}
+            #{item.type}
+            #{item.createdAt}
+            #{item.activityPrice}
+            #{item.price}
+            #{item.extra}
+            #{item.sellerSetJson}
+            #{item.isCouponCard}
+            #{item.commission}
+            #{item.isActivity}
+
+            #{item.details}
+            #{item.id}
+            #{item.state}
+            #{item.sellerPoint}
+
+            #{item.updatedAt}
+            #{item.expressType}
+            #{item.weight}
+            #{item.outLink}
+            #{item.goodId}
+            #{item.isOutLink}
+            #{item.gdeliveryTemplateName}
+            #{item.url}
+            #{item.chainsActionId}
+            #{item.numb}
+            #{item.sale}
+            #{item.unit}
+            #{item.gdeliveryTemplateId}
+            #{item.sharePrice}
+            #{item.refundNumb}
+            #{item.zeroBuy}
+            #{item.name}
+            #{item.shopType}
+            #{item.categoryId}
+            )
+
+        </foreach>
+    </insert>
+
+
+</mapper>
